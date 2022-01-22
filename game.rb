@@ -19,7 +19,7 @@
 # ************************************** GRABBING/GATHERING OUTSIDE CLASSES ***************************************
 require_relative 'game_class'
 require_relative 'player_class'
-
+require_relative 'treasure_trove'
 
 # ************************************** THE CODE THAT IS GETTING RUN ***************************************
 player1 = Player.new("moe")
