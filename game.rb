@@ -31,8 +31,8 @@ knuckleheads.add_player(player1)
 knuckleheads.add_player(player2)
 knuckleheads.add_player(player3)
 
-knuckleheads.play           #this is the line that actually starts the game
-
+knuckleheads.play(2)           #this is the line that actually starts the game
+knuckleheads.print_stats
 # ************************************** BONUS CODE TO RUN ***************************************
 
 # player4 = Player.new("Alvin", 100)
@@ -43,5 +43,5 @@ knuckleheads.play           #this is the line that actually starts the game
 # chipmunks.add_player(player4)
 # chipmunks.add_player(player5)
 # chipmunks.add_player(player6)
-# chipmunks.play
+# chipmunks.play(3)        # (3) means it plays 3 rounds
 

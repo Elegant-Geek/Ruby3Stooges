@@ -13,20 +13,20 @@ describe Game do
 
   it "w00t for high die roll" do
     Die.any_instance.stub(:roll).and_return(5)
-    @game.play
-    @player.health.should == (@ih + 15)
+    @game.play(2)
+    @player.health.should == @ih + (15 * 2)
   end
 
   it "skip for mid die roll" do
     Die.any_instance.stub(:roll).and_return(3)
-    @game.play
+    @game.play(2)
     @player.health.should == @ih
   end
   
   it "blams for low die roll" do
     Die.any_instance.stub(:roll).and_return(1)
-    @game.play
-    @player.health.should == @ih - 10
+    @game.play(2)
+    @player.health.should == (@ih - 10 * 2)
   end
 
 end
