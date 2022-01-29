@@ -15,6 +15,10 @@ class Game
         @players.push(a_player)   #use @players since @players refers to the array u created in the initialize method
     end
 
+    def total_points
+      @players.reduce(0) { |sum, player| sum + player.points }
+    end
+
     def play(rounds)
       puts "There are #{@players.size} players in #{@title}: "
       
@@ -63,5 +67,15 @@ class Game
       formatted_name = player.name.ljust(20, '.')
       puts "#{formatted_name} #{player.score}"
     end
+
+    @players.each do |player|
+      puts "\n#{player.name}'s point totals:"
+      puts "#{player.points} grand total points"
+    end
+
+    puts "\n#{total_points} total points from treasures found."
+
+
+
   end
 end

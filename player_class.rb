@@ -2,21 +2,32 @@ class Player
     attr_reader :health
     attr_accessor :name
  
-     def initialize(name, health=100)
+     def initialize(name, health=100) #overwrites the default method when Player.new is created! Default health is now 100.
          @name = name.capitalize
          @health = health
+         @found_treasures = Hash.new(0)
      end
- 
+
+     def found_treasure(treasure)
+         @found_treasures[treasure.name] += treasure.points
+         puts "#{@name} found a #{treasure.name} worth #{treasure.points} points."
+         puts "#{@name}'s treasures: #{@found_treasures}"
+     end
+ # POINTS *********************
+     def points
+      @found_treasures.values.reduce(0, :+)
+     end
+ # SCORE *********************
      def score
-       @name.length + @health
+       points + @health
      end 
  
      def name=(new_name)
        @name = new_name.capitalize
      end
  
-     def to_s
-         "I'm #{@name} with a health of #{@health} and a score of #{score}."
+     def to_s #to_s overwrites/defines the default method for PUTS.
+         "I'm #{@name} with health = #{@health}, points = #{points}, and score = #{score}."   
       end
      
       def blam
@@ -33,9 +44,10 @@ class Player
          @health > 100
       end
 
-      def <=>(other)
+      def <=>(other) #this overrides default for whenever the compare <=> operator is used on player class object.
          other.score <=> score
       end
+
  end
 
  if __FILE__ == $0
