@@ -1,3 +1,6 @@
+require_relative 'treasure_trove'
+
+
 class Player
     attr_reader :health
     attr_accessor :name
@@ -46,6 +49,13 @@ class Player
 
       def <=>(other) #this overrides default for whenever the compare <=> operator is used on player class object.
          other.score <=> score
+      end
+
+
+      def each_found_treasure
+          @found_treasures.each do |name, points|
+            yield Treasure.new(name, points)
+        end
       end
 
  end
