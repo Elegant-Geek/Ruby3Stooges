@@ -2,11 +2,20 @@
 require_relative 'game_class'
 require_relative 'player_class'
 require_relative 'treasure_trove'
+require_relative 'clumsy_player_class'
+require_relative 'berserk_player_class'
+require_relative 'berserk_player_class'
 
 # ************************************** THE CODE THAT IS GETTING RUN ***************************************
 knuckleheads = Game.new("Knuckleheads")
 # knuckleheads.load_players("players.csv")
 knuckleheads.load_players(ARGV.shift || "players.csv") 
+
+klutz = ClumsyPlayer.new("klutz", 105)
+knuckleheads.add_player(klutz)
+
+berserker = BerserkPlayer.new("berserker", 50)
+knuckleheads.add_player(berserker)
 
 loop do
     puts "\nHow many rounds? (Type 'quit' or 'exit' to end the game.)"
