@@ -1,7 +1,6 @@
 require_relative 'game'
 
 describe Game do
-
   before do
     @game = Game.new("Knuckleheads")
 

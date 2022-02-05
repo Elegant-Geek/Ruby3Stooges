@@ -51,13 +51,11 @@ class Player
          other.score <=> score
       end
 
-
       def each_found_treasure
           @found_treasures.each do |name, points|
             yield Treasure.new(name, points)
         end
       end
-
  end
 
  if __FILE__ == $0

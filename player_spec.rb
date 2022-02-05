@@ -2,8 +2,6 @@ require_relative 'player_class'
 require_relative 'spec_helper'
 require_relative 'treasure_trove'
 
-
-
 describe Player do
     before do
         @ih = 150
@@ -20,10 +18,6 @@ describe Player do
         @player.health.should == 150
     end
 
-    # it "has a string representation" do
-
-    #     @player.to_s.should == "I'm Larry with a health of 150 and a score of 155." #dont forget those double equal signs! and "SHOULD"
-    # end
 
     it "has a string representation" do
       @player.found_treasure(Treasure.new(:hammer, 50))
@@ -131,9 +125,6 @@ describe Player do
           Treasure.new(:bottle, 25)
        ]
       end
-
-
-
 end
 
 

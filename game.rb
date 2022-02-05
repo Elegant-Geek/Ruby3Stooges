@@ -1,47 +1,25 @@
-#**************************************** CODE FROM PART 11 NOW... *************************************************
-#  player1 = Player.new("moe", 100)
-#  player2 = Player.new("larry", 60)
-#  player3 = Player.new("curly", 125)
- 
-#  puts player1
-#  puts player2
-#  puts player3
- 
-#  player3.blam
-#  puts player3
-#  player3.w00t
-#  puts player3
- 
-#  puts player1.health
-#  puts player2.health
-#  puts player3.health
-
 # ************************************** GRABBING/GATHERING OUTSIDE CLASSES ***************************************
 require_relative 'game_class'
 require_relative 'player_class'
 require_relative 'treasure_trove'
 
 # ************************************** THE CODE THAT IS GETTING RUN ***************************************
-player1 = Player.new("moe")
-player2 = Player.new("larry", 60)
-player3 = Player.new("curly", 125)
-
 knuckleheads = Game.new("Knuckleheads")
-knuckleheads.add_player(player1)
-knuckleheads.add_player(player2)
-knuckleheads.add_player(player3)
+# knuckleheads.load_players("players.csv")
+knuckleheads.load_players(ARGV.shift || "players.csv") 
 
-knuckleheads.play(2)           #this is the line that actually starts the game
-knuckleheads.print_stats
-# ************************************** BONUS CODE TO RUN ***************************************
+loop do
+    puts "\nHow many rounds? (Type 'quit' or 'exit' to end the game.)"
+    answer = gets.chomp.downcase #gets takes user input from cmd (must run from cmd now). chomp removes line break caused by ENTER key.
+    case answer
+    when /^\d+$/
+        knuckleheads.play(answer.to_i) #the line that starts the game
+    when 'quit', 'exit', 'stop'
+        knuckleheads.print_stats #the line that prints the stats
+        break
+    else 
+        puts "Please enter a number or type 'quit' to end the game."
+    end
+end
 
-# player4 = Player.new("Alvin", 100)
-# player5 = Player.new("Simon", 60)
-# player6 = Player.new("Theo", 125)
-
-# chipmunks = Game.new("Chipmunks")
-# chipmunks.add_player(player4)
-# chipmunks.add_player(player5)
-# chipmunks.add_player(player6)
-# chipmunks.play(3)        # (3) means it plays 3 rounds
-
+knuckleheads.save_high_scores
