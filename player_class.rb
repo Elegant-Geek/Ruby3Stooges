@@ -1,9 +1,13 @@
 require_relative 'treasure_trove'
-
+require_relative 'playable_module'
 
 class Player
-    attr_reader :health
+    attr_accessor :health
     attr_accessor :name
+
+    # or combine into one line like this......  attr_accessor :name, :health
+
+    include Playable
  
      def initialize(name, health=100) #overwrites the default method when Player.new is created! Default health is now 100.
          @name = name.capitalize
@@ -33,19 +37,21 @@ class Player
          "I'm #{@name} with health = #{@health}, points = #{points}, and score = #{score}."   
       end
      
-      def blam
-         @health -= 10
-         puts "#{@name} got blammed!"
-      end
- 
-      def w00t
-         @health += 15
-         puts "#{@name} got w00ted!"
-      end
+# below woot blam strong has been moved to Playable module
 
-      def strong?
-         @health > 100
-      end
+      # def blam
+      #    @health -= 10
+      #    puts "#{@name} got blammed!"
+      # end
+ 
+      # def w00t
+      #    @health += 15
+      #    puts "#{@name} got w00ted!"
+      # end
+
+      # def strong?
+      #    @health > 100
+      # end
 
       def <=>(other) #this overrides default for whenever the compare <=> operator is used on player class object.
          other.score <=> score

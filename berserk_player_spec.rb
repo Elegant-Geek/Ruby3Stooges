@@ -3,8 +3,8 @@ require_relative 'berserk_player_class'
 describe BerserkPlayer do
 
   before do
-    @initial_health = 50
-    @player = BerserkPlayer.new("berserker", @initial_health)
+    @ih = 50 #it was at initial_health not ih
+    @player = BerserkPlayer.new("berserker", @ih)
   end
 
   it "does not go berserk when w00ted up to 5 times" do
@@ -23,7 +23,7 @@ describe BerserkPlayer do
     1.upto(6) { @player.w00t } #6 woots
     1.upto(2) { @player.blam } #2 blams
 
-    @player.health.should == @initial_health + (8 * 15)
+    @player.health.should == @ih + (8 * 15)
   end
 
 end

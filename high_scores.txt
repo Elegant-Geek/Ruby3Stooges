@@ -1,8 +1,8 @@
-File updated/created on 02/05/2022 at 01:55 AM.
+File updated/created on 02/07/2022 at 12:18 AM.
 
 Knuckleheads High Scores:
-Berserker........... 68335
-Alvin............... 63755
-Theo................ 61620
-Simon............... 61575
-Klutz............... 34980.0
+Alvin............... 485
+Klutz............... 160.0
+Berserker........... 155
+Theo................ 115
+Simon............... 115

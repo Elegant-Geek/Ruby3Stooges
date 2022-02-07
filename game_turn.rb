@@ -2,9 +2,10 @@
 require_relative 'player_class'
 require_relative 'die'
 require_relative 'treasure_trove'
+require_relative 'loaded_die'
 module GameTurn
     def self.take_turn(player) 
-        die = Die.new
+        die = Die.new #replace Die with LoadedDie to see the loaded die exposed by its class! (since audit was implemented in the roll method)
           case die.roll
           when 1..2
             player.blam

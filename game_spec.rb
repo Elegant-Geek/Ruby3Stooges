@@ -1,4 +1,4 @@
-require_relative 'game'
+require_relative 'game_class'
 
 describe Game do
   before do
