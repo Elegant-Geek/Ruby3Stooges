@@ -1,15 +1,16 @@
 require_relative 'auditable'
+module StudioGame
+    class Die
+        include Auditable
+        attr_reader :number #makes die remember the number it rolled
 
-class Die
-    include Auditable
-    attr_reader :number #makes die remember the number it rolled
+        def roll
+            @number = rand(1..6)
+            audit
+            @number #Lastly, return the @number value as the last expression in the method since the game expects roll to return a number.
+        end
 
-    def roll
-        @number = rand(1..6)
-        audit
-        @number #Lastly, return the @number value as the last expression in the method since the game expects roll to return a number.
     end
-
 end
 
 #my own code showing that the die contains a readable attribute, its number!

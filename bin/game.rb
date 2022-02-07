@@ -1,15 +1,15 @@
-# ************************************** GRABBING/GATHERING OUTSIDE CLASSES ***************************************
-require_relative 'game_class'
-require_relative 'player_class'
-require_relative 'treasure_trove'
-require_relative 'clumsy_player_class'
-require_relative 'berserk_player_class'
-require_relative 'berserk_player_class'
+require_relative './lib/game_class'
+require_relative './lib/clumsy_player_class'
+require_relative './lib/berserk_player_class'
 
 # ************************************** THE CODE THAT IS GETTING RUN ***************************************
-knuckleheads = Game.new("Knuckleheads")
+
+game = StudioGame::Game.new("Knuckleheads")
 # knuckleheads.load_players("players.csv")
-knuckleheads.load_players(ARGV.shift || "players.csv") 
+# knuckleheads.load_players(ARGV.shift || "players.csv") 
+default_player_file = File.join(File.dirname(__FILE__), 'players.csv')
+game.load_players(ARGV.shift || default_player_file)
+
 
 klutz = ClumsyPlayer.new("klutz", 105)
 knuckleheads.add_player(klutz)
