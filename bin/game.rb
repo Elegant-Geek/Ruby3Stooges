@@ -1,6 +1,6 @@
-require_relative './lib/game_class'
-require_relative './lib/clumsy_player_class'
-require_relative './lib/berserk_player_class'
+require_relative '../lib/game_class'
+require_relative '../lib/clumsy_player_class'
+require_relative '../lib/berserk_player_class'
 
 # ************************************** THE CODE THAT IS GETTING RUN ***************************************
 

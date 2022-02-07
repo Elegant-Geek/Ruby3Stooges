@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   
     s.files         = Dir["{bin,lib,spec}/**/*"] + %w(LICENSE.txt README.txt) #altered line
     s.test_files    = Dir["spec/**/*"]
-    s.executables   = Dir[ 'bin/bin/game.rb' ] #altered line
+    s.executables   = Dir[ 'game.rb' ] #altered line to  just say 'game.rb'
   
     s.required_ruby_version = '>=1.9'
     s.add_development_dependency 'rspec', '~> 2.8', '>= 2.8.0'
