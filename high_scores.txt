@@ -1,10 +1,8 @@
-File updated/created on 02/07/2022 at 12:54 PM.
+File updated/created on 02/08/2022 at 02:02 AM.
 
-Knuckleheads High Scores:
-Sir................. 590
-Violet.............. 275
-Terry............... 175
-Klutz............... 145.0
-Berserker........... 140
-Daisy............... 105
-Buddy............... 76
+Three (Or More) Stooges High Scores:
+Sir................. 1175
+Terry............... 1030
+Daisy............... 880
+Violet.............. 705
+Buddy............... 501

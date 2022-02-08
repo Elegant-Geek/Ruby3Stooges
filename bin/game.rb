@@ -2,21 +2,25 @@ require_relative '../lib/game_class'
 require_relative '../lib/clumsy_player_class'
 require_relative '../lib/berserk_player_class'
 
-# ************************************** THE CODE THAT IS GETTING RUN ***************************************
+# ************************************** Final Code ***************************************
  #type 'ruby bin/game.rb' to start a game
 
-game = StudioGame::Game.new("Knuckleheads")
+game = StudioGame::Game.new("Three (Or More) Stooges")
 # knuckleheads.load_players("players.csv")
 # knuckleheads.load_players(ARGV.shift || "players.csv") 
 default_player_file = File.join(File.dirname(__FILE__), 'players.csv')
-game.load_players(ARGV.shift || default_player_file)
 
+the_file_option = (ARGV.shift || default_player_file) #extracting the or statement to be its own variable
+game.load_players(the_file_option) #subbing in the variable here
 
-klutz = StudioGame::ClumsyPlayer.new("klutz", 105) #altered 11th commit
-game.add_player(klutz) #altered 11th commit
+if the_file_option == default_player_file # if the variable takes the form of the default file (no user csv file is specified)
+    klutz = StudioGame::ClumsyPlayer.new("klutz", 105) #then a clumsy player "Klutz" will be added
+    game.add_player(klutz) 
 
-berserker = StudioGame::BerserkPlayer.new("berserker", 50) #altered 11th commit
-game.add_player(berserker) #altered 11th commit
+    berserker = StudioGame::BerserkPlayer.new("berserker", 50) #and a berserker player "Klutz" will be added
+    game.add_player(berserker) 
+else # otherwise (if the user specifies their own csv file, berserker and klutz players will not interfere/be added!!)
+end
 
 loop do
     puts "\nHow many rounds? (Type 'quit' or 'exit' to end the game.)"
@@ -32,4 +36,4 @@ loop do
     end
 end
 
-game.save_high_scores
+game.save_high_scores #prints high scores to a .txt file

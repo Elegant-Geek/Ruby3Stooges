@@ -54,7 +54,7 @@ module StudioGame
       end
 
       def play(rounds)
-        puts "There are #{@players.size} players in #{@title}: "
+        puts "There are #{@players.size} players in the game '#{@title}': " 
         
         @players.each do |player|
           puts player

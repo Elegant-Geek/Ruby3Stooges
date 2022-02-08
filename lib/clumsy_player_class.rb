@@ -7,7 +7,7 @@ module StudioGame
           # @found_treasures[treasure.name] += treasure.points
           # puts "#{@name} found a #{treasure.name} worth #{treasure.points} points."
 
-          damaged_treasure = Treasure.new(treasure.name, treasure.points / 2.0)
+          damaged_treasure = Treasure.new(treasure.name, treasure.points / 2.0) #critical that this yields a floating point result/value! 
           super(damaged_treasure)
         end
   end 
