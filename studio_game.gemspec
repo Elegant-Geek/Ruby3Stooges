@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-    s.name         = "studio_game"
+    s.name         = "jamies_studio_game"
     s.version      = "1.0.0"
     s.author       = "Jamie Clark"
     s.email        = "clarkcjamie@gmail.com"
@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   
     s.files         = Dir["{bin,lib,spec}/**/*"] + %w(LICENSE.txt README.txt) #altered line
     s.test_files    = Dir["spec/**/*"]
-    s.executables   = Dir[ 'game.rb' ] #altered line to  just say 'game.rb'
+    s.executables   = [ 'game.rb' ] # NO DIR in front
   
     s.required_ruby_version = '>=1.9'
     s.add_development_dependency 'rspec', '~> 2.8', '>= 2.8.0'
