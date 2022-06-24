@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
     s.name         = "j_studio_game"
-    s.version      = "1.0.1"
+    s.version      = "1.0.2"
     s.author       = "Jamie Clark"
     s.email        = "clarkcjamie@gmail.com"
     s.homepage     = "http://pragmaticstudio.com" 
