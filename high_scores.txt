@@ -1,8 +1,8 @@
-File updated/created on 06/24/2022 at 01:48 PM.
+File updated/created on 06/24/2022 at 01:56 PM.
 
 Three (Or More) Stooges High Scores:
-Simon............... 900
-Alvin............... 710
-Theo................ 695
-Klutz............... 620.0
-Berserker........... 560
+Simon............... 470
+Klutz............... 260.0
+Theo................ 230
+Alvin............... 165
+Berserker........... 90

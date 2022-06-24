@@ -1,7 +1,7 @@
 BASIC INSTRUCTIONS 
 
-INSTALLATION EXAMPLE (For older version of 1.0.0):
-gem install studio_game-1.0.0.gem
+INSTALLATION EXAMPLE (For older version of 1.0.1):
+gem install jamies_studio_game-1.0.1.gem
 
 TO RUN DEFAULT CSV SHEET PLAYERS:
 ruby bin/game.rb
