@@ -13,5 +13,5 @@ FORMATTING
 Column 1 for names and column 2 initial health values (integers only)
 
 Call your own CSV file from cmd line like this:
-ruby bin/game.rb yourfile.csv
+game yourfile.csv
 Try running ruby bin/game.rb bin/sideshow.csv
