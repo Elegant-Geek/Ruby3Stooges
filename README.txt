@@ -4,7 +4,7 @@ INSTALLATION EXAMPLE (For older version of 1.0.1):
 gem install jamies_studio_game-1.0.1.gem
 
 TO RUN DEFAULT CSV SHEET PLAYERS:
-ruby bin/game.rb
+game
 
 TO RUN A CUSTOM CSV FILE:
 You can also drop your own game csv file with the name and health of players.
